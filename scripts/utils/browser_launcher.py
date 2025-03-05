@@ -33,8 +33,9 @@ def open_chat(
     """
     if not is_formatted:
         prompt = format_prompt(prompt)
-    prompt = quote(prompt)
-    if len(prompt) < 200:
+
+    if len(prompt) < 2080:
+        prompt = quote(prompt)
         url = get_service_url(prompt, service_name)
         open_in_browser(url, browser)
     else:
