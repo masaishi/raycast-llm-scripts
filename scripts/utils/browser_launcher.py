@@ -3,6 +3,7 @@ import webbrowser
 from urllib.parse import quote
 
 from .configs import default_browser, default_service_name
+from .keyboard_utils import keyboard_flow
 from .url_utils import format_prompt, get_service_url
 
 
@@ -33,9 +34,13 @@ def open_chat(
     if not is_formatted:
         prompt = format_prompt(prompt)
     prompt = quote(prompt)
-    url = get_service_url(prompt, service_name)
-    print(url)
-    open_in_browser(url, browser)
+    if len(prompt) < 200:
+        url = get_service_url(prompt, service_name)
+        open_in_browser(url, browser)
+    else:
+        url = get_service_url("", service_name)
+        open_in_browser(url, browser)
+        keyboard_flow(prompt)
 
 
 if __name__ == "__main__":
