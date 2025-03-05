@@ -1,4 +1,4 @@
-# 🤖 Raycast LLM Scripts Template
+# 🤖 Raycast LLM Scripts Repository
 
 <div align="center">
   <table>
@@ -17,45 +17,39 @@
 
 ## 🌟 Overview
 
-This repository provides a template for creating Raycast scripts that integrate with popular LLMs (ChatGPT, Claude, and Perplexity) **without requiring API keys**. Simply write Python scripts with prompt templates, and launch your favorite LLM in the browser with pre-filled prompts.
+This repository is not a polished template but rather a collection of diverse and experimental Raycast scripts that integrate with popular LLMs (ChatGPT, Claude, and Perplexity) **without requiring API keys**. The scripts here are added organically as new ideas emerge, providing a playground for testing and evolving different use cases.
 
-### ✨ Key Benefits
+### ✨ Why This Repository?
 
-- **No API Keys Required**: Just opens the browser with your prompt as the query - no API credentials needed
-- **Browser-Based**: Works with web interfaces you're already familiar with
-- **Quick Access**: Launch saved prompts directly from Raycast
-- **Fully Customizable**: Create and modify scripts to suit your specific needs
+- **Experimental Playground**: Expect a mix of ideas, from polished scripts to rough drafts.
+- **No API Keys Required**: Scripts work directly with web interfaces, launching queries in the browser.
+- **Quick Prototyping**: Ideal for trying out new ideas and building quick tools.
+- **Freedom to Customize**: Feel free to modify, extend, or adapt the scripts to your specific needs.
 
-## 📋 Features
+## 📋 What to Expect
 
-- **📚 Example Scripts**: Collection of practical scripts for common tasks
-- **🎯 Script Generator**: Create new LLM scripts with a simple command
-- **🔄 Multi-Service Support**: Seamlessly switch between ChatGPT, Claude, and Perplexity
+- **🛠️ Variety of Scripts**: The repository contains scripts for everything from summarizing text to generating creative prompts.
+- **⚡ Quick Additions**: New scripts are added whenever inspiration strikes. This is a dynamic and ever-changing collection.
+- **🎲 Unpredictable Content**: Unlike a structured template, you might find experimental or work-in-progress scripts here.
 
 ## 🚀 Getting Started
 
-### Use This Template
+### Clone This Repository
 
-1. Click the "Use this template" button above
-2. Name your repository
-3. Clone your new repository:
+1. Clone the repository directly:
 ```bash
-git clone https://github.com/yourusername/raycast-llm-scripts.git
+git clone https://github.com/masaishi/raycast-llm-scripts.git
 ```
 
-### Setup
-
-![setup](https://i.gyazo.com/7daab3fcb350face8debe5f37f6dccb9.gif)
-
-1. Install [Raycast](https://raycast.com/) if you haven't already
-2. Import the scripts in Raycast:
+2. Install [Raycast](https://raycast.com/) if you haven't already.
+3. Import the scripts in Raycast:
    - Open Raycast
    - Go to Extensions
    - Click the "+" button
    - Choose "Import Script Command"
    - Select scripts from your repository
 
-## 📚 Usage Examples
+## 📚 Example Scripts
 
 ```
 > Summarize Text [Your long text here]
@@ -67,26 +61,13 @@ git clone https://github.com/yourusername/raycast-llm-scripts.git
 > Improve Prompt [Prompt]
 ```
 
-## 🛠️ Creating Your Scripts
+## 🛠️ Adding Your Own Scripts
 
-### Using the Script Generator
+### Quick Additions
 
-The fastest way to create new scripts:
+Feel free to add your own scripts directly. There’s no strict format—just make sure the script works and is useful to you!
 
-1. Run the Create LLM Script command
-    ```
-    > Create LLM Script
-    Script purpose: Create a script that translates text between languages
-    ```
-2. Describe what you want the script to do
-3. Get a complete script with:
-   - Raycast parameters
-   - Prompt template
-   - Proper formatting
-
-### Manual Creation
-
-Create scripts manually using this template:
+### Example Script Structure
 
 ```python
 #!/usr/bin/env python3
@@ -100,32 +81,24 @@ Create scripts manually using this template:
 # @raycast.icon 🔍
 # @raycast.packageName Category Name
 
-from utils import open_chat  # Clean import from utils package
+from utils import open_chat
 
 prompt = """Your prompt template here:
 
 {1}"""
 
-open_chat(prompt)  # Uses default_service_name from configs.py
-# or specify service: open_chat(prompt, "claude")
-# or specify both: open_chat(prompt, "perplexity", "Google Chrome")
+open_chat(prompt)
 ```
-
-## 📚 Developer Documentation
-
-For detailed information about utilities and script writing guidelines, check out our [Developer Guide](docs/developer-guide.md).
 
 ## 🤝 Contributing
 
-If you create useful scripts with this template, please consider contributing them back to the community! 
+Since this is not a curated template but a live repository of evolving ideas, contributions are very welcome. Submit a pull request if you have an interesting script to share. There are no formal contribution guidelines—just keep it clean and useful!
 
 **Send your pull requests to: https://github.com/masaishi/raycast-llm-scripts**
 
-Most contributions will be merged as long as they don't present ethical or security concerns. Your scripts can help others enhance their productivity with LLMs!
-
 ## 📄 License
 
-This template is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
